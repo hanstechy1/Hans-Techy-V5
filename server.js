@@ -52,6 +52,17 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Ukurasa wa mwanzo kuangalia kama seva iko hewani
+app.get('/', (req, res) => {
+  res.send(`
+    <div style="font-family: sans-serif; text-align: center; padding: 50px;">
+      <h1 style="color: #25D366;">🚀 HANS TECHY V5 Server is Running!</h1>
+      <p>Multi-User WhatsApp Bot & Auto-Save Session Service is Active.</p>
+    </div>
+  `);
+});
+
+
 app.listen(CONFIG.PORT, async () => {
   console.log(`===============================================`);
   console.log(`🚀 ${CONFIG.BOT_NAME} Seva imewashwa kwenye Port ${CONFIG.PORT}`);
